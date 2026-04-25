@@ -1,0 +1,31 @@
+.home {
+    background-color: rgb(21, 51, 78);
+}
+
+.about {
+    padding: 1rem 0;
+    background-color: #EDF7F6;
+}
+
+.about p {
+  color: var(--text-color) !important;
+}
+
+.skills{
+    padding: 1rem 0;
+    background-color: rgb(21, 51, 78);
+}
+
+.contact {
+    background-color: rgb(21, 51, 78);
+}
+
+.col-3:nth-child(2) .logo {
+    transition-delay: 200ms;
+}
+.col-3:nth-child(3) .logo {
+    transition-delay: 400ms;
+}
+.col-3:nth-child(4) .logo {
+    transition-delay: 600ms;
+}

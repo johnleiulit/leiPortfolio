@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Lei's Portfolio</title>
     <!-- JS -->
-     <script defer src="main.js"></script>
+    <script defer src="assets/js/navigation.js"></script>
+    <script defer src="assets/js/animations.js"></script>
+    <script defer src="assets/js/theme-toggle.js"></script>
+    <script defer src="assets/js/modal.js"></script>
+    <script defer src="assets/js/carousel.js"></script>
+    <script defer src="assets/js/main.js"></script>
     <!-- CSS -->
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="assets/css/main.css">
      <!-- BOOTSTRAP -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
      <!-- Font Awesome -->
@@ -17,10 +22,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
 </head>
 <body>
     <!-- NAVBAR -->
-  
   </nav> 
    <nav class="navbar navbar-expand-lg p-3 sticky-top container-fluid">
       <div class="container-fluid">
@@ -45,7 +52,7 @@
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5 "><img class="img-fluid rounded-circle p-3 " src="img/me.jpg" alt="..." /></div>
+                    <div class="p-5 "><img class="img-fluid rounded-circle p-3 " src="assets/images/profile/me.jpg" alt="..." /></div>
                 </div>
                 <div class="text-center col-lg-6 order-lg-1 ">
                     <div class="p-5">
@@ -74,12 +81,11 @@
               <h2 class="text-center ">About me </h2>
               <div class="hidden-2">
               <p class="fs-5 mt-5 text-black"> 
-                Hello !  As a third-year computer science student, I'm passionate about learning more about the rapidly growing tech industry and developing up with practical answers to problems. I'm interested in programming, software development, and other related fields, and I like working on projects that challenge my critical and creative thinking.
+                Hello! As a Computer Science student graduating on May 3, 2026, I'm passionate about software quality and delivering reliable, bug-free applications. I have a strong interest in test automation, software development, and QA engineering, and I enjoy working on projects that challenge my critical and creative thinking
               </p>
               <br>
               <p class="fs-5 pb-5 text-black">
-                Outside of school, I like to play basketball, play online games, experiment with new technologies, and improve my coding skill.  I enjoy being able to use code to make my ideas possible, and I'm actively improving my skills to specialize in languages and tools like MERN (MongoDB, Express, React, Node.js) and PHP/Laravel.
-              </p>
+                Outside of school, I like to play basketball, play online games, experiment with new technologies, and continuously improve my coding skills. I enjoy turning ideas into working solutions through code, and I'm actively specializing in test automation using Selenium, as well as web development with Laravel.
               </div>
             </div>
         </div>
@@ -88,859 +94,673 @@
     <!-- SKILLS -->
     <section id="skills" class="skills">
       <div class="container text-center mt-3">
-        <h2 class="text-white mb-3">SKILLS</h2>
-        <h2 class="mb-4 text-light">Programming Languages & Tools</h2>
-        <div class="row g-2 ">
-          <div class="col-3 ">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/html.png" alt="" style="width: 40%;">
-            </div>
-            <p class="text-white">HTML</p>
-          </div>
-          <div class="col-3 ">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/css.png" alt="" style="width: 40%;">
-            </div>
-            <p class="text-white">CSS</p>
-          </div>
-          <div class="col-3 ">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/bootstrap.jpg" alt="" style="width: 40%;">
-            </div>
-            <p class="text-white">BOOTSTRAP</p>
-          </div>
-          <div class="col-3 ">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/php.png" alt="" style="width: 40%;">
-            </div>
-            <p class="text-white">PHP</p>
-          </div>   
-        </div>
-      </div>
+        <h2 class="text-white mb-1">SKILLS</h2>
+        <h5 class="text-light mb-4">Tech Stack</h5>
 
-      <div class="container text-center mt-3">
-        <div class="row g-2">
+        <!-- Frontend -->
+        <p class="category-label text-start">Frontend</p>
+        <div class="row g-2 mb-4">
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/laravel.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-brands fa-html5" style="color:#e34c26;"></i>
+              <p class="text-dark mb-0 small">HTML</p>
             </div>
-            <p class="text-white">LARAVEL</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/sql.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-brands fa-css3-alt" style="color:#264de4;"></i>
+              <p class="text-dark mb-0 small">CSS</p>
             </div>
-            <p class="text-white">SQL</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1" >
-              <img src="img/java.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-4">
+              <i class="fa-brands fa-bootstrap" style="color:#7952b3;"></i>
+              <p class="text-dark mb-0 small">Bootstrap</p>
             </div>
-            <p class="text-white">JAVA</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/c.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-4">
+              <i class="fa-brands fa-js" style="color:#f7df1e;"></i>
+              <p class="text-dark mb-0 small">JavaScript</p>
             </div>
-            <p class="text-white">C#</p>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-brands fa-react" style="color:#61DBFB;"></i>
+              <p class="text-dark mb-0 small">React</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container text-center mt-3">
-        <div class="row g-2">
+        <!-- Backend -->
+        <p class="category-label text-start">Backend</p>
+        <div class="row g-2 mb-4">
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/mongodb.svg" alt="" style="width: 40%; height: px;" >
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-brands fa-laravel" style="color:#ff2d20;"></i>
+              <p class="text-dark mb-0 small">Laravel</p>
             </div>
-            <p class="text-white">MONGO DB</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/reac.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-brands fa-node-js" style="color:#339933;"></i>
+              <p class="text-dark mb-0 small">Node.js</p>
             </div>
-            <p class="text-white">REACT JS</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/nodejs.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-4">
+              <i class="fa-solid fa-server" style="color:#444;"></i>
+              <p class="text-dark mb-0 small">Express</p>
             </div>
-            <p class="text-white">NODE JS</p>
           </div>
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1">
-              <img src="img/photoshop.png" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-4">
+              <i class="fa-brands fa-php" style="color:#8892be;"></i>
+              <p class="text-dark mb-0 small">PHP</p>
             </div>
-            <p class="text-white">PHOTOSHOP</p>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-solid fa-database" style="color:#00618a;"></i>
+              <p class="text-dark mb-0 small">MySQL</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-2">
+              <i class="fa-solid fa-leaf" style="color:#47a248;"></i>
+              <p class="text-dark mb-0 small">MongoDB</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container text-center mt-3 mb-3">
-        <div class="row g-2">
+        <!-- Automation -->
+        <p class="category-label text-start">Automation</p>
+        <div class="row g-2 mb-4">
           <div class="col-3">
-            <div class="skill p-3 bg-white logo hidden-1 ">
-              <img src="img/vscode.svg" alt="" style="width: 40%;">
+            <div class="skill bg-white rounded hidden-2">
+              <img src="assets/images/skills/selenium.png" 
+                  alt="Selenium" style="width: 50px; height: 32px; object-fit: contain;">
+              <p class="text-dark mb-0 small">Selenium</p>
             </div>
-            <P class="text-white">Visual Studio Code</P>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-2">
+              <img src="assets/images/skills/appium.png" 
+                  alt="Appium" style="width: 50px; height: 32px; object-fit: contain;">
+              <p class="text-dark mb-0 small">Appium</p>
+            </div>
           </div>
         </div>
+
+        <!-- Tools -->
+        <p class="category-label text-start">Tools</p>
+        <div class="row g-2 mb-4">
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-brands fa-git-alt" style="color:#f05032;"></i>
+              <p class="text-dark mb-0 small">Git</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-brands fa-github" style="color:#333;"></i>
+              <p class="text-dark mb-0 small">GitHub</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-brands fa-gitlab" style="color:#e24329;"></i>
+              <p class="text-dark mb-0 small">GitLab</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-brands fa-slack" style="color:#4a154b;"></i>
+              <p class="text-dark mb-0 small">Slack</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-brands fa-jira" style="color:#0052cc;"></i>
+              <p class="text-dark mb-0 small">JIRA</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <i class="fa-solid fa-code" style="color:#0078d4;"></i>
+              <p class="text-dark mb-0 small">VS Code</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <img src="assets/images/skills/eclipse.png" 
+                  alt="Eclipse" style="width: 50px; height: 32px; object-fit: contain;">
+              <p class="text-dark mb-0 small">Eclipse</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="skill bg-white rounded hidden-1">
+              <img src="assets/images/skills/postman.png" 
+                  alt="Postman" style="width: 50px; height: 32px; object-fit: contain;">
+              <p class="text-dark mb-0 small">Postman</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
     <!-- PROJECTS -->
-    <section id="projects" class="hidden projects pb-5 ">
-      <h2 class="text-center mt-3">Projects </h2>
-        <!-- MilkteaSHOP -->
-        <div class="container px-5">
-          <div class="row gx-5 align-items-center mt-4 ">
-            <div class="col-lg-6 order-lg-2">
-              <div id="carouselMilkteaShop" class="carousel slide mb-4">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div>
-                <div class="carousel-inner hidden-3">
-                  <div class="carousel-item active">
-                    <p class="fw-bold fs-3">Step 1: Select Product</p>
-                    <img src="img/c/pic1.PNG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 2: Select Size</p>
-                    <img src="img/c/pic2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 3: Select Sugar level</p>
-                    <img src="img/c/pic3.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 4: Payment</p>
-                    <img src="img/c/pic4.jpg" class="d-block w-100" alt="...">
-                    
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 5: Receipt</p>
-                    <img src="img/c/pic5.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMilkteaShop" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselMilkteaShop" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-          </div>
-          <div class="content text-center col-lg-6 order-lg-1 ">
-            <div class="p-1 hidden-1 ">
-              <h4 class="display-6 anton-regular m-2">Milktea Shop </h4>
-                    <p>Users can choose from a list of Milktea. Each selected can be ordered in different sizes, each with a corresponding price
-                      Users can select their preferred sugal level, ranging from 0% to 100 %.
-                      The program keeps track of the user's order, displaying the selected items, quantities, and total cost.
-                      For the last users can enter their payment amount and the program calculates any change due.
-                    </p>
-                    <button type="button" class="btn btn-outline-dark m-1">C#</button>
-                    <button type="button" class="btn btn-outline-dark m-1">Microsoft Visual Studio</button>
-                    <div class="mt-3">
-                      <a href="https://github.com/johnlei-07/Milktea-Shop.git" target="_blank" class="btn btn-outline-dark">
-                        <i class="fab fa-github fa-lg"></i>
-                      </a>
-                  </div>
-            </div>
-          </div>
-        </div>
-    </section>
-    <!-- APPLE SHOP -->
     <section id="projects" class="projects pb-5">
-        <div class="container px-5">
-          <div class="row gx-5 align-items-center mt-4 ">
-            <div class="col-lg-6 order-lg-2">
-              <div id="carouselAppleShop" class="carousel slide mb-4">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                </div>
-                <div class="carousel-inner hidden-3">
-                  <div class="carousel-item active">
-                    <p class="fw-bold fs-3">Step 1: Select Product</p>
-                    <img src="img/java/pic1.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 2: Select Model</p>
-                    <img src="img/java/pic2.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 3: Enter Quantiy</p>
-                    <img src="img/java/pic3.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 4: Input X to check the cart</p>
-                    <img src="img/java/pic4.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 5: The Cart</p>
-                    <img src="img/java/pic5.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 6: Input V for the checkout</p>
-                    <img src="img/java/pic6.JPG" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <p class="fw-bold fs-3">Step 7: Billing Station</p>
-                    <img src="img/java/pic7.JPG" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAppleShop" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselAppleShop" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-          </div>
-          <div class="content text-center col-lg-6 order-lg-2 ">
-            <div class="p-1 hidden-1">
-              <h4 class="display-6 anton-regular m-2 ">Apple Shop </h4>
-                    <p>
-                      The system uses Object-Oriented Programming (OOP) principles to organize code into classes for a shopping experience. 
-                      It allows users to browse, select, add items to their cart, and check out.
-                      It tracks total cost, item count, and validates payments.
-                    </p>
-                    <div class="pt-3">
-                      <button type="button" class="btn btn-outline-dark m-1">Java</button>  
-                      <button type="button" class="btn btn-outline-dark m-1">OOP</button>                
-                      <button type="button" class="btn btn-outline-dark m-1">Eclipse</button> 
-                    </div>  
-                    <div class="mt-3">
-                      <a href="https://github.com/johnlei-07/Apple-Shop.git" target="_blank" class="btn btn-outline-dark">
-                        <i class="fab fa-github fa-lg"></i>
-                      </a>
-                  </div>       
-            </div>
-          </div>
+      <div class="container px-4 mt-4">
+        <h2 class="text-center mt-3 ">Projects</h2>
+        <h5 class="text-center mb-4">Web Development</h5>
+        <!-- Project Navigation -->
+        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+          <button class="btn btn-dark btn-sm px-4" id="prevProj" onclick="changeProject(-1)" disabled>&#8592; Prev</button>
+          <span class="text-muted px-1" id="projCounter">1 / 10</span>
+          <button class="btn btn-dark btn-sm px-4" id="nextProj" onclick="changeProject(1)">Next &#8594;</button>
         </div>
-    </section>
-    <!-- SALARY MANAGEMENT SYSTEM -->
-    <section id="projects" class="projects pb-5">
-      <div class="container px-5">
-        <div class="row gx-5 align-items-center mt-4 ">
-          <div class="col-lg-6 order-lg-2 ">
-            <div id="carouselSalary" class="carousel slide mb-4">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>          
-              </div>
-              <div class="carousel-inner hidden-3">
-                <div class="carousel-item active">  
-                  <img src="img/js/pic1.JPG" class="d-block w-100" alt="...">
-                </div>       
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalary" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselSalary" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-        <div class="content text-center col-lg-6 order-lg-1">
-          <div class="p-1 hidden-1">
-            <h4 class="display-6 anton-regular m-2">Salary Management System (CRUD) </h4>
-                  <p>
-                    The system allows users to input employee details, calculate salary based on regular, overtime, and 
-                    15% tax deductions, search for specific employees, delete records, and update existing data.
-                  </p>
-                  <div class="pt-3 m-1">
-                    <button type="button" class="btn btn-outline-dark m-1">HTML</button>
-                    <button type="button" class="btn btn-outline-dark m-1">CSS</button>
-                    <button type="button" class="btn btn-outline-dark m-1">BOOTSTRAP</button>
-                    <button type="button" class="btn btn-outline-dark m-1">Javascript</button>  
-                  </div>     
-                  <div class="mt-3">
-                    <a href="https://github.com/johnlei-07/Salary-Management-System-CRUD-.git" target="_blank" class="btn btn-outline-dark">
-                      <i class="fab fa-github fa-lg"></i>
-                    </a>
-                </div>    
-          </div>
-        </div>
-      </div>
-  </section>
-  <!-- NIKE STORE -->
-  <section id="projects" class="projects pb-5">
-    <div class="container px-5">
-      <div class="row gx-5 align-items-center mt-4 ">
-        <div class="col-lg-6 order-lg-2">
-          <div id="carouselNike" class="carousel slide mb-4">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner hidden-3">
-              <div class="carousel-item active">
-                <p class="fw-bold fs-3">Log in Form</p>
-                <img src="img/dotnet/pic1.JPG" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <p class="fw-bold fs-3">Registration Form</p>
-                <img src="img/dotnet/pic2.JPG" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <p class="fw-bold fs-3">Database for Accounts</p>
-                <img src="img/dotnet/pic3.JPG" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <p class="fw-bold fs-3">Simple CRUD</p>
-                <img src="img/dotnet/pic4.JPG" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <p class="fw-bold fs-3">Database for Order Information</p>
-                <img src="img/dotnet/pic5.JPG" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNike" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselNike" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-      <div class="content text-center col-lg-6 order-lg-2 ">
-        <div class="p-1 hidden-1">
-          <h4 class="display-6 anton-regular m-2">Nike Store (CRUD) </h4>
-                <p>
-                  Through a SQL Server database connection, the application enables users to register and log in to a store, 
-                  organize products into sections, examine product details, place orders, and 
-                  manage account information and order details.
-                </p>
-                <div class="pt-4 m-1">
-                  <button type="button" class="btn btn-outline-dark m-1">C#</button>
-                  <button type="button" class="btn btn-outline-dark m-1">.NET Framework</button>
-                  <button type="button" class="btn btn-outline-dark m-1">SQL</button> 
-                </div>   
-                <div class="mt-3">
-                  <a href="https://github.com/johnlei-07/Nike-Store-.NET-.git" target="_blank" class="btn btn-outline-dark">
-                    <i class="fab fa-github fa-lg"></i>
-                  </a>
-              </div>     
-        </div>
-      </div>
-    </div>
-</section>
 
-<!-- PHONE MANAGEMENT SYSTEM -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-2">
-        <div id="carouselPhone" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Adding new product</p>
-              <img src="img/mern/pic1.png" class="d-block w-100 border border-4 border-dark" alt="...">
+        <!-- Project 0: Milktea Shop -->
+        <div class="project-slide active" id="proj-0">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc0">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/c/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/c/pic2.jpg" alt="">
+                  <img class="proj-img" src="assets/images/projects/c/pic3.jpg" alt="">
+                  <img class="proj-img" src="assets/images/projects/c/pic4.jpg" alt="">
+                  <img class="proj-img" src="assets/images/projects/c/pic5.jpg" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc0',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc0',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc0-lbl">Step 1: Select Product</div>
+                </div>
+                <div class="proj-dots" id="pc0-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Display to main page</p>
-              <img src="img/mern/pic2.png" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Updating product</p>
-              <img src="img/mern/pic3.png" class="d-block w-100 border border-4 border-dark"  alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Successfully Updated</p>
-              <img src="img/mern/pic4.png" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Inserted to Database</p>
-              <img src="img/mern/pic5.png" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Successfully Deleted</p>
-              <img src="img/mern/pic6.png" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhone" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselPhone" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2 ">Phone Management System (CRUD) </h4>
-              <p>
-                A full-stack web application, Phone Management System was built with the MERN stack (MongoDB, Express.js, React.js, and Node.js). 
-                In addition to adding, updating, removing, and examining phone details, 
-                it allows users to manage phone records easily. 
-
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Milktea Shop</h4>
+              <p>Users can choose from a list of Milktea. Each selected can be ordered in different sizes, each with a corresponding price.
+                Users can select their preferred sugar level, ranging from 0% to 100%.
+                The program keeps track of the user's order, displaying the selected items, quantities, and total cost.
+                For the last users can enter their payment amount and the program calculates any change due.
               </p>
-              <div class="pt-3 ">
-                <button type="button" class="btn btn-outline-dark m-1">MONGODB</button>
-                <button type="button" class="btn btn-outline-dark m-1">EXPRESS JS</button>
-                <button type="button" class="btn btn-outline-dark m-1">REACT JS</button>
-                <button type="button" class="btn btn-outline-dark m-1">NODE JS</button> 
-              </div>      
-              <div class="mt-2">
-                <button type="button" class="btn btn-outline-dark m-1">BOOTSTRAP</button>
-                <button type="button" class="btn btn-outline-dark m-1">CSS</button>
-              </div>  
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/Phone-Management-System-CRUD-.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
-            </div> 
-      </div>
-    </div>
-  </div>
-</section>
-<!-- LARAVEL EMPLOYEE MANAGEMENT SYSTEM -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-2">
-        <div id="carouselEmployee" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Login Form</p>
-              <img src="img/laravel/pic1.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Admin Dashboard</p>
-              <img src="img/laravel/pic2.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Employee Table</p>
-              <img src="img/laravel/pic3.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Employee 1 Dashboard</p>
-              <img src="img/laravel/pic4.png" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Employee 2 Dashboard</p>
-              <img src="img/laravel/pic5.png" class="d-block w-100 border border-4 border-dark" alt="...">
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">C#</span>
+                <span class="proj-tag">Microsoft Visual Studio</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Milktea-Shop.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmployee" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselEmployee" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-2 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2">Employee Payroll Management System </h4>
-              <p>
-                A full-stack web application.
+        </div>
+
+        <!-- Project 1: Apple Shop -->
+        <div class="project-slide" id="proj-1">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc1">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/java/pic1.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic2.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic3.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic4.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic5.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic6.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/java/pic7.JPG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc1',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc1',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc1-lbl">Step 1: Select Product</div>
+                </div>
+                <div class="proj-dots" id="pc1-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Apple Shop</h4>
+              <p>The system uses Object-Oriented Programming (OOP) principles to organize code into classes for a shopping experience.
+                It allows users to browse, select, add items to their cart, and check out.
+                It tracks total cost, item count, and validates payments.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">OOP</span>
+                <span class="proj-tag">Eclipse</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Apple-Shop.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Salary Management System -->
+        <div class="project-slide" id="proj-2">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc2">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/js/pic1.JPG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc2',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc2',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc2-lbl">Salary Management System</div>
+                </div>
+                <div class="proj-dots" id="pc2-dots">
+                  <span class="pdot on"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Salary Management System (CRUD)</h4>
+              <p>The system allows users to input employee details, calculate salary based on regular, overtime, and
+                15% tax deductions, search for specific employees, delete records, and update existing data.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">JavaScript</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Salary-Management-System-CRUD-.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Nike Store -->
+        <div class="project-slide" id="proj-3">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc3">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/dotnet/pic1.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/dotnet/pic2.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/dotnet/pic3.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/dotnet/pic4.JPG" alt="">
+                  <img class="proj-img" src="assets/images/projects/dotnet/pic5.JPG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc3',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc3',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc3-lbl">Log in Form</div>
+                </div>
+                <div class="proj-dots" id="pc3-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Nike Store (CRUD)</h4>
+              <p>Through a SQL Server database connection, the application enables users to register and log in to a store,
+                organize products into sections, examine product details, place orders, and
+                manage account information and order details.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">C#</span>
+                <span class="proj-tag">.NET Framework</span>
+                <span class="proj-tag">SQL</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Nike-Store-.NET-.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Phone Management System -->
+        <div class="project-slide" id="proj-4">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc4">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/mern/pic1.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/mern/pic2.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/mern/pic3.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/mern/pic4.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/mern/pic5.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/mern/pic6.png" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc4',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc4',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc4-lbl">Adding new product</div>
+                </div>
+                <div class="proj-dots" id="pc4-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Phone Management System (CRUD)</h4>
+              <p>A full-stack web application, Phone Management System was built with the MERN stack (MongoDB, Express.js, React.js, and Node.js).
+                In addition to adding, updating, removing, and examining phone details,
+                it allows users to manage phone records easily.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">Express JS</span>
+                <span class="proj-tag">React JS</span>
+                <span class="proj-tag">Node JS</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">CSS</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Phone-Management-System-CRUD-.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Employee Payroll (Laravel) -->
+        <div class="project-slide" id="proj-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc5">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/laravel/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/laravel/pic2.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/laravel/pic3.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/laravel/pic4.png" alt="">
+                  <img class="proj-img" src="assets/images/projects/laravel/pic5.png" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc5',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc5',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc5-lbl">Login Form</div>
+                </div>
+                <div class="proj-dots" id="pc5-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Employee Payroll Management System</h4>
+              <p>A full-stack web application.
                 Admins have complete control over employee profiles, managing payslip data for accurate payroll processing and can create, update, and delete them as needed.
                 Employees can access their personal profiles, which contain their personal and employment information, but they are not allowed to edit or delete their profiles.
-
               </p>
-              <div class="pt-3 m-1">
-                <button type="button" class="btn btn-outline-dark m-1">HTML</button>
-                <button type="button" class="btn btn-outline-dark m-1">BOOTSTRAP</button>
-                <button type="button" class="btn btn-outline-dark m-1">PHP</button>
-                <button type="button" class="btn btn-outline-dark m-1">LARAVEL</button>
-                <button type="button" class="btn btn-outline-dark m-1">MYSQL</button> 
-              </div>      
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/Employee-Payroll-Management-System.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">PHP</span>
+                <span class="proj-tag">Laravel</span>
+                <span class="proj-tag">MySQL</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Employee-Payroll-Management-System.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
             </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- MY PORTFOLIO -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-2">
-        <div id="carouselPortfolio" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Laptop View</p>
-              <img src="img/portfolio/pic1.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Mobile View</p>
-              <img src="img/portfolio/pic2.png" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-           
-           
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2">My Portfolio </h4>
-              <p>
-                  This personal website purpose to showcase my simple skills, projects and experiences using HTML, CSS,
-                  Bootstrap and Javascript and others languages. This portfolio's responsive and simple layout makes sure
-                  it looks great features on all screens.
-              </p>
-              <div class="pt-5 ">
-                <button type="button" class="btn btn-outline-dark m-1">HTML</button>
-                <button type="button" class="btn btn-outline-dark m-1">CSS</button>
-                <button type="button" class="btn btn-outline-dark m-1">BOOTSTRAP</button>
-                <button type="button" class="btn btn-outline-dark m-1">JAVASCRIPT</button>
-              </div>      
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/leiPortfolio.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- WORKOUT MANAGEMENT -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-1">
-        <div id="carouselWorkout" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
 
-          </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Login Form</p>
-              <img src="img/PythonFlask/workoutManagement/pic1.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
+        <!-- Project 6: My Portfolio -->
+        <div class="project-slide" id="proj-6">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc6">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/portfolio/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/portfolio/pic2.png" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc6',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc6',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc6-lbl">Laptop View</div>
+                </div>
+                <div class="proj-dots" id="pc6-dots">
+                  <span class="pdot on"></span><span class="pdot"></span>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">User 1 Dashboard</p>
-              <img src="img/PythonFlask/workoutManagement/pic2.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">User 2 Dashboard</p>
-              <img src="img/PythonFlask/workoutManagement/pic3.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Delete Permanently Modal</p>
-              <img src="img/PythonFlask/workoutManagement/pic4.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Recovery Modal</p>
-              <img src="img/PythonFlask/workoutManagement/pic5.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-             <div class="carousel-item">
-              <p class="fw-bold fs-3">Progress Overtime</p>
-              <img src="img/PythonFlask/workoutManagement/pic6.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            
-           
-           
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselWorkout" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselWorkout" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2">Workout Management System (CRUD) </h4>
-              <p>
-                  A full-stack web application titled the Workout Management System was created 
-                  to assist fitness individuals in monitoring their workout progress over time. 
-                  Using the Flask backend and React frontend, this application offers a complete solution for recording, assessing, and displaying exercise data.
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">My Portfolio</h4>
+              <p>This personal website purpose to showcase my simple skills, projects and experiences using HTML, CSS,
+                Bootstrap and Javascript and others languages. This portfolio's responsive and simple layout makes sure
+                it looks great features on all screens.
               </p>
-              <div class="pt-3 ">
-                <button type="button" class="btn btn-outline-dark m-1">Python Flask</button>
-                <button type="button" class="btn btn-outline-dark m-1">Mongo DB</button>
-                <button type="button" class="btn btn-outline-dark m-1">React Js</button>
-                <button type="button" class="btn btn-outline-dark m-1">React Bootstrap</button>
-                <button type="button" class="btn btn-outline-dark m-1">Postman</button>
-              </div>      
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/Workout-Management-System.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">JavaScript</span>
+              </div>
+              <a href="https://github.com/johnlei-07/leiPortfolio.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
             </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- EMPLOYEE MANAGEMENT SYSTEM PYTHON FLASK -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-2">
-        <div id="carouselEmployee2" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          </div>
+        </div>
 
-          </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Login Form</p>
-              <img src="img/PythonFlask/employeeManagement/pic1.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
+        <!-- Project 7: Workout Management -->
+        <div class="project-slide" id="proj-7">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc7">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/PythonFlask/workoutManagement/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/workoutManagement/pic2.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/workoutManagement/pic3.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/workoutManagement/pic4.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/workoutManagement/pic5.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/workoutManagement/pic6.PNG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc7',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc7',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc7-lbl">Login Form</div>
+                </div>
+                <div class="proj-dots" id="pc7-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Admin Statistic</p>
-              <img src="img/PythonFlask/employeeManagement/pic2.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Create Employee Account</p>
-              <img src="img/PythonFlask/employeeManagement/pic3.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">List of Employees</p>
-              <img src="img/PythonFlask/employeeManagement/pic4.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">View and Edit Per Employee</p>
-              <img src="img/PythonFlask/employeeManagement/pic5.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-             <div class="carousel-item">
-              <p class="fw-bold fs-3">Employee 1 Details</p>
-              <img src="img/PythonFlask/employeeManagement/pic6.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Employee 2 Details</p>
-              <img src="img/PythonFlask/employeeManagement/pic7.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            
-           
-           
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEmployee2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselEmployee2" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2"> Employee Payroll Management System </h4>
-              <p>
-                 The Employee Payroll Management System is a web application that 
-                 uses Python Flask for the backend and React for the frontend. 
-                 It helps manage employee details, process payroll, and handle admin tasks in an easy and efficient way.
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Workout Management System (CRUD)</h4>
+              <p>A full-stack web application titled the Workout Management System was created
+                to assist fitness individuals in monitoring their workout progress over time.
+                Using the Flask backend and React frontend, this application offers a complete solution for recording, assessing, and displaying exercise data.
               </p>
-              <div class="pt-3 ">
-                <button type="button" class="btn btn-outline-dark m-1">Python Flask</button>
-                <button type="button" class="btn btn-outline-dark m-1">Mongo DB</button>
-                <button type="button" class="btn btn-outline-dark m-1">React Js</button>
-                <button type="button" class="btn btn-outline-dark m-1">Bootstrap</button>
-                <button type="button" class="btn btn-outline-dark m-1">Postman</button>
-              </div>      
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/EmployeePayroll-Management-System.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Python Flask</span>
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">React JS</span>
+                <span class="proj-tag">React Bootstrap</span>
+                <span class="proj-tag">Postman</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Workout-Management-System.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
             </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- COUNSELING GUIDANCE -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-1">
-        <div id="carouselGuidance" class="carousel slide mb-4">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 13"></button>
-
-
           </div>
-          <div class="carousel-inner hidden-3">
-            <div class="carousel-item active">
-              <p class="fw-bold fs-3">Login Form</p>
-              <img src="img/PythonFlask/counselingGuidance/pic11.PNG" class="d-block w-100 border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Registration for BED and HED</p>
-              <img src="img/PythonFlask/counselingGuidance/pic12.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Admin Statistics</p>
-              <img src="img/PythonFlask/counselingGuidance/pic1.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">List of Counselors </p>
-              <img src="img/PythonFlask/counselingGuidance/pic2.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">List of Students</p>
-              <img src="img/PythonFlask/counselingGuidance/pic3.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Counselor Statistics</p>
-              <img src="img/PythonFlask/counselingGuidance/pic4.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">List of Students that Assign by Admin</p>
-              <img src="img/PythonFlask/counselingGuidance/pic5.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-             <div class="carousel-item">
-              <p class="fw-bold fs-3">Assign Regular Counseling</p>
-              <img src="img/PythonFlask/counselingGuidance/pic6.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Appointment Schedule</p>
-              <img src="img/PythonFlask/counselingGuidance/pic7.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Student Dashboard</p>
-              <img src="img/PythonFlask/counselingGuidance/pic8.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">Request Appointment</p>
-              <img src="img/PythonFlask/counselingGuidance/pic9.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-            <div class="carousel-item">
-              <p class="fw-bold fs-3">History of Appointments</p>
-              <img src="img/PythonFlask/counselingGuidance/pic10.PNG" class="d-block w-100  border border-4 border-dark" alt="...">
-            </div>
-           
-           
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselGuidance" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselGuidance" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2">Counseling Management System </h4>
-              <p>
-                 A full-stack Counseling Management System
-                 to improve communication between counselors and students 
-                 in educational environments. By making appointment scheduling, counseling session management, and student record-keeping more easily, 
-                 this platform optimizes the guidance services workflow.
-              </p>
-              <div class="pt-3 ">
-                <button type="button" class="btn btn-outline-dark m-1">Python Flask</button>
-                <button type="button" class="btn btn-outline-dark m-1">Mongo DB</button>
-                <button type="button" class="btn btn-outline-dark m-1">React Js</button>
-                <button type="button" class="btn btn-outline-dark m-1">Bootstrap</button>
-                <button type="button" class="btn btn-outline-dark m-1">Postman</button>
-              </div>      
-              <div class="mt-3">
-                <a href="https://github.com/johnlei-07/Counseling-Management-System.git" target="_blank" class="btn btn-outline-dark">
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
-            </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
 
-<!-- LEARNING THIS SEM -->
-<section id="projects" class="projects pb-5">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center mt-4 ">
-      <div class="col-lg-6 order-lg-2">
-        <h1>Learning this semester</h1>
-    </div>
-    <div class="content text-center col-lg-6 order-lg-1 ">
-      <div class="p-1 hidden-1">
-        <h4 class="display-6 anton-regular m-2">3rd year subjects</h4>
-              <p>
-                ✔️ <strong>Software Engineering: </strong> (Software Development Lifecycle)<br>
-                ✔️ <strong>Programming Languages: </strong> Python Flask, Postman, MongoDB, Reactjs<br>
-                ✔️ <strong>Computational Science: </strong> Power BI, Excel, Python<br>
-                ✔️ <strong>	Algoriths and Complexity</strong>
+        <!-- Project 8: Employee Payroll (Flask) -->
+        <div class="project-slide" id="proj-8">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc8">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/PythonFlask/employeeManagement/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic2.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic3.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic4.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic5.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic6.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/employeeManagement/pic7.PNG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc8',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc8',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc8-lbl">Login Form</div>
+                </div>
+                <div class="proj-dots" id="pc8-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Employee Payroll Management System</h4>
+              <p>The Employee Payroll Management System is a web application that
+                uses Python Flask for the backend and React for the frontend.
+                It helps manage employee details, process payroll, and handle admin tasks in an easy and efficient way.
               </p>
-             
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Python Flask</span>
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">React JS</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">Postman</span>
+              </div>
+              <a href="https://github.com/johnlei-07/EmployeePayroll-Management-System.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: Counseling Management -->
+        <div class="project-slide" id="proj-9">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="pc9">
+                <div class="proj-img-box">
+                  <img class="proj-img show" src="assets/images/projects/PythonFlask/counselingGuidance/pic11.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic12.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic1.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic2.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic3.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic4.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic5.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic6.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic7.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic8.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic9.PNG" alt="">
+                  <img class="proj-img" src="assets/images/projects/PythonFlask/counselingGuidance/pic10.PNG" alt="">
+                  <button class="proj-c-btn prev" onclick="slideImg('pc9',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="slideImg('pc9',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="pc9-lbl">Login Form</div>
+                </div>
+                <div class="proj-dots" id="pc9-dots">
+                  <span class="pdot on"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Counseling Management System</h4>
+              <p>A full-stack Counseling Management System
+                to improve communication between counselors and students
+                in educational environments. By making appointment scheduling, counseling session management, and student record-keeping more easily,
+                this platform optimizes the guidance services workflow.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Python Flask</span>
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">React JS</span>
+                <span class="proj-tag">Bootstrap</span>
+                <span class="proj-tag">Postman</span>
+              </div>
+              <a href="https://github.com/johnlei-07/Counseling-Management-System.git" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+    
+  <!-- QA AUTOMATION PROJECTS -->
+  <section id="qa-projects" class="projects pb-5">
+    <div class="container px-4 mt-4">
+      <h2 class="text-center mt-3">Projects</h2>
+      <h5 class="text-center mb-4">QA Automation</h5>
+
+      <!-- Project Navigation -->
+      <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+        <button class="btn btn-dark btn-sm px-4" id="prevQA" onclick="changeQAProject(-1)" disabled>&#8592; Prev</button>
+        <span class="text-muted px-1" id="qaCounter">1 / 2</span>
+        <button class="btn btn-dark btn-sm px-4" id="nextQA" onclick="changeQAProject(1)">Next &#8594;</button>
+      </div>
+
+      <!-- QA Project 0: Selenium Web Automation -->
+      <div class="project-slide active" id="qa-proj-0">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="proj-inner-carousel" id="qpc0">
+              <div class="proj-img-box">
+                <video class="proj-img show" controls muted>
+                  <source src="assets/images/projects/qa/orangehrm/orangeHRM.mp4" type="video/mp4">
+                </video>
+                <img class="proj-img" src="assets/images/projects/qa/orangehrm/orangeHRM.png" alt="">
+                <button class="proj-c-btn prev" onclick="slideImg('qpc0',-1)">&#8249;</button>
+                <button class="proj-c-btn next" onclick="slideImg('qpc0',1)">&#8250;</button>
+                <div class="proj-slide-lbl" id="qpc0-lbl">Test Overview</div>
+              </div>
+              <div class="proj-dots" id="qpc0-dots">
+                <span class="pdot on"></span><span class="pdot"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <h4 class="display-6 anton-regular m-2">OrangeHRM Test Automation Framework</h4>
+            <p>Shows scale (200+ steps, 12+ modules), specific application (OrangeHRM), architecture (POM, BDD), and professional practices.
+            </p>
+            <div class="proj-tags mb-3">
+              <span class="proj-tag">Selenium</span>
+              <span class="proj-tag">Java</span>
+              <span class="proj-tag">TestNG</span>
+              <span class="proj-tag">Eclipse</span>
+              <span class="proj-tag">Cucumber</span>
+              <span class="proj-tag">Maven </span>
+            </div>
+            <a href="https://github.com/johnleiulit/orange-hrm-automation-selenium" target="_blank" class="btn btn-outline-dark">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QA Project 1: Appium Mobile Automation -->
+      <div class="project-slide" id="qa-proj-1">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="proj-inner-carousel" id="qpc1">
+              <div class="proj-img-box">
+                <img class="proj-img show" src="assets/images/projects/qa/appium/pic1.PNG" alt="">
+                <img class="proj-img" src="assets/images/projects/qa/appium/pic2.PNG" alt="">
+                <button class="proj-c-btn prev" onclick="slideImg('qpc1',-1)">&#8249;</button>
+                <button class="proj-c-btn next" onclick="slideImg('qpc1',1)">&#8250;</button>
+                <div class="proj-slide-lbl" id="qpc1-lbl">Mobile Test Cases</div>
+              </div>
+              <div class="proj-dots" id="qpc1-dots">
+                <span class="pdot on"></span><span class="pdot"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <h4 class="display-6 anton-regular m-2">Appium Mobile Automation</h4>
+            <p>A mobile test automation project using Appium to automate Android application testing.
+              Covers UI interaction tests, navigation flows, and functional validations for mobile apps.
+            </p>
+            <div class="proj-tags mb-3">
+              <span class="proj-tag">Appium</span>
+              <span class="proj-tag">Java</span>
+              <span class="proj-tag">Android</span>
+              <span class="proj-tag">Eclipse</span>
+            </div>
+            <a href="https://github.com/johnlei-07" target="_blank" class="btn btn-outline-dark">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- LEARNING THIS SEM -->
+  <section id="projects" class="projects pb-5">
+    <div class="container text-center py-5">
+      <h2 class="mb-3">Currently Learning</h2>
+        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+          <span class="badge rounded-pill px-4 py-2" style="background:#15334e; font-size:14px;">Selenium</span>
+          <span class="badge rounded-pill px-4 py-2" style="background:#15334e; font-size:14px;">Test Case Writing</span>
+        </div>
+    </div>
+  </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact py-5 ">

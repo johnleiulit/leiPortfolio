@@ -1,0 +1,18 @@
+html, body {
+    overflow-x: clip;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+h1{
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.anton-regular {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+}

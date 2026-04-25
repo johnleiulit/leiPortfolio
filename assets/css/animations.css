@@ -1,0 +1,33 @@
+/* Scroll animations */
+.hidden-1{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.hidden-2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden-3{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateZ(-100%);
+    transition: all 1.5s;
+}
+.hidden-4{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
