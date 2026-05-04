@@ -35,7 +35,8 @@
 /* Typing animation */
 #typing-text {
     display: inline; 
-
+    background-color: transparent !important;
+    color: inherit !important;
 }
 
 .typing-cursor {
