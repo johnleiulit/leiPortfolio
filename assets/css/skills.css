@@ -18,3 +18,18 @@
 .skill i {
   font-size: 2rem;
 }
+
+/* Dark mode styling for skill cards */
+[data-theme="dark"] .skill {
+  background-color: rgba(228, 230, 235, 0.15) !important;
+  border: 1px solid rgba(228, 230, 235, 0.2);
+}
+
+
+[data-theme="dark"] .skill p {
+  color: rgba(228, 230, 235, 0.9) !important;
+}
+
+[data-theme="dark"] .category-label {
+  color: rgba(228, 230, 235, 0.9) !important;
+}
