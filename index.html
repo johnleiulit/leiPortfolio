@@ -10,6 +10,7 @@
     <script defer src="assets/js/theme-toggle.js"></script>
     <script defer src="assets/js/modal.js"></script>
     <script defer src="assets/js/carousel.js"></script>
+    <script defer src="assets/js/certifications.js"></script>
     <script defer src="assets/js/main.js"></script>
     <!-- CSS -->
      <link rel="stylesheet" href="assets/css/main.css">
@@ -289,6 +290,68 @@
 
       </div>
     </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="certifications mt-5">
+      <div class="certifications-header">
+        <h2 class="text-center text-dark mb-2">CERTIFICATIONS</h2>
+        <p class="text-center text-dark mb-0">Professional Credentials</p>
+      </div>
+      
+      <div class="container px-5 py-5">
+        <div class="row g-4">
+          
+          <!-- Certification 1 -->
+          <div class="col-md-6">
+            <div class="cert-card hidden-2">
+              <div class="cert-image-wrapper mb-3" onclick="openCertModal('assets/images/certifications/gemini.jpg')">
+                <img src="assets/images/certifications/gemini.jpg" 
+                    alt="Gemini Certified Student Certificate" 
+                    class="cert-image">
+                <div class="cert-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <h4 class="cert-title text-light">Gemini Certified Student</h4>
+              <p class="cert-issuer mb-2 text-light">Google for Education</p>
+              <p class="cert-date text-light">January 12, 2025</p>
+              <div class="cert-badge">
+                <i class="fas fa-check-circle"></i> Verified
+              </div>
+            </div>
+          </div>
+
+          <!-- Certification 2 -->
+          <div class="col-md-6">
+            <div class="cert-card hidden-4">
+              <div class="cert-image-wrapper mb-3" onclick="openCertModal('assets/images/certifications/tesda-nc3.jpg')">
+                <img src="assets/images/certifications/tesda-nc3.jpg" 
+                    alt="NC III Visual Graphic Design Certificate" 
+                    class="cert-image">
+                <div class="cert-overlay">
+                  <i class="fas fa-search-plus"></i>
+                </div>
+              </div>
+              <h4 class="cert-title text-light">NC III Visual Graphic Design</h4>
+              <p class="cert-issuer mb-2 text-light">TESDA</p>
+              <p class="cert-date text-light">Awaiting Release</p>
+              <div class="cert-badge pending">
+                <i class="fas fa-clock"></i> Pending
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="cert-modal" onclick="closeCertModal()">
+      <span class="cert-modal-close">&times;</span>
+      <img class="cert-modal-content" id="certModalImg">
+      <div class="cert-modal-caption" id="certModalCaption"></div>
+    </div>
+
     <!-- PROJECTS -->
     <section id="projects" class="projects pb-5">
       <div class="container px-4 mt-4">
