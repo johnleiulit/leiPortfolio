@@ -2,7 +2,7 @@ function openCertModal(imageSrc) {
     const modal = document.getElementById('certModal');
     const modalImg = document.getElementById('certModalImg');
     
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modalImg.src = imageSrc;
     
     document.body.style.overflow = 'hidden';
