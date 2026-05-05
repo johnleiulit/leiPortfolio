@@ -388,3 +388,11 @@
         font-size: 40px;
     }
 }
+.proj-video {
+   width: 100%;
+  height: 450px; /* Increase height to show full phone */
+  object-fit: contain; /* Maintains aspect ratio, shows entire video */
+  object-position: center; /* Centers the video */
+  background: transparent;
+}
+

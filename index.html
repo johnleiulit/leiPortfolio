@@ -353,9 +353,101 @@
     </div>
 
     <!-- PROJECTS -->
-    <section id="projects" class="projects pb-5">
+     <!-- QA AUTOMATION PROJECTS -->
+    <section id="qa-projects" class="projects pb-5">
       <div class="container px-4 mt-4">
         <h2 class="text-center mt-3 ">Projects</h2>
+        <h5 class="text-center mb-4">QA Automation</h5>
+
+        <!-- Project Navigation -->
+        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+          <button class="btn btn-dark btn-sm px-4" id="prevQA" onclick="changeQAProject(-1)" disabled>&#8592; Prev</button>
+          <span class="text-muted px-1" id="qaCounter">1 / 2</span>
+          <button class="btn btn-dark btn-sm px-4" id="nextQA" onclick="changeQAProject(1)">Next &#8594;</button>
+        </div>
+
+        <!-- QA Project 0: Selenium Web Automation -->
+        <div class="project-slide active" id="qa-proj-0">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="qpc0">
+                <div class="proj-img-box" onclick="openProjModal(this)">
+                  <video class="proj-img show" controls muted>
+                    <source src="assets/images/projects/qa/orangehrm/orangeHRM.mp4" type="video/mp4">
+                  </video>
+                    <img class="proj-img" src="assets/images/projects/qa/orangehrm/orangeHRM.png" alt="OrangeHRM Test Automation">                  <div class="proj-img-overlay">
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                  <button class="proj-c-btn prev" onclick="event.stopPropagation(); slideImg('qpc0',-1)">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="event.stopPropagation(); slideImg('qpc0',1)">&#8250;</button>
+                  <div class="proj-slide-lbl" id="qpc0-lbl">Test Overview</div>
+                </div>
+                <div class="proj-dots" id="qpc0-dots">
+                  <span class="pdot on"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">OrangeHRM Test Automation</h4>
+              <p>Shows scale (200+ steps, 12+ modules), specific application (OrangeHRM), architecture (POM, BDD), and professional practices.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Selenium</span>
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">TestNG</span>
+                <span class="proj-tag">Eclipse</span>
+                <span class="proj-tag">Cucumber</span>
+                <span class="proj-tag">Maven </span>
+              </div>
+              <a href="https://github.com/johnleiulit/orange-hrm-automation-selenium" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Project 1: Appium Mobile Automation -->
+        <div class="project-slide" id="qa-proj-1">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="qpc1">
+                <div class="proj-img-box" onclick="openProjModal(this)">
+                  <video class="proj-img show proj-video" controls muted>
+                    <source src="assets/images/projects/qa/e-commerce-appium/e-commerce-appium.mp4" type="video/mp4">
+                  </video>
+                  <div class="proj-img-overlay">
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                  <button class="proj-c-btn prev" onclick="event.stopPropagation(); slideImg('qpc1',-1)" aria-label="Previous">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="event.stopPropagation(); slideImg('qpc1',1)" aria-label="Next">&#8250;</button>
+                  <div class="proj-slide-lbl">Mobile Test Cases</div>
+                </div>
+                <div class="proj-dots" id="qpc1-dots">
+                  <span class="pdot on" aria-label="Slide 1"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">E-Commerce Appium Test Automation</h4>
+              <p>Mobile automation using Appium for Android. Covers UI tests, navigation flows, and functional validations with POM and TestNG.</p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Appium</span>
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">Android</span>
+                <span class="proj-tag">Eclipse</span>
+                <span class="proj-tag">TestNG</span>
+                <span class="proj-tag">Maven</span>
+              </div>
+              <a href="https://github.com/johnleiulit/e-commerce-automation-appium" target="_blank" class="btn btn-outline-dark" rel="noopener">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects pb-5">
+      <div class="container px-4 mt-4">
         <h5 class="text-center mb-4">Web Development</h5>
         <!-- Project Navigation -->
         <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
@@ -789,97 +881,6 @@
                 <span class="proj-tag">Postman</span>
               </div>
               <a href="https://github.com/johnlei-07/Counseling-Management-System.git" target="_blank" class="btn btn-outline-dark">
-                <i class="fab fa-github fa-lg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Project Image Modal -->
-
-    <!-- QA AUTOMATION PROJECTS -->
-    <section id="qa-projects" class="projects pb-5">
-      <div class="container px-4 mt-4">
-        <h5 class="text-center mb-4">QA Automation</h5>
-
-        <!-- Project Navigation -->
-        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-          <button class="btn btn-dark btn-sm px-4" id="prevQA" onclick="changeQAProject(-1)" disabled>&#8592; Prev</button>
-          <span class="text-muted px-1" id="qaCounter">1 / 2</span>
-          <button class="btn btn-dark btn-sm px-4" id="nextQA" onclick="changeQAProject(1)">Next &#8594;</button>
-        </div>
-
-        <!-- QA Project 0: Selenium Web Automation -->
-        <div class="project-slide active" id="qa-proj-0">
-          <div class="row gx-5 align-items-center">
-            <div class="col-lg-6">
-              <div class="proj-inner-carousel" id="qpc0">
-                <div class="proj-img-box" onclick="openProjModal(this)">
-                  <video class="proj-img show" controls muted>
-                    <source src="assets/images/projects/qa/orangehrm/orangeHRM.mp4" type="video/mp4">
-                  </video>
-                  <img class="proj-img" src="assets/images/projects/qa/orangehrm/orangeHRM.png" alt="">
-                  <div class="proj-img-overlay">
-                    <i class="fas fa-search-plus"></i>
-                  </div>
-                  <button class="proj-c-btn prev" onclick="event.stopPropagation(); slideImg('qpc0',-1)">&#8249;</button>
-                  <button class="proj-c-btn next" onclick="event.stopPropagation(); slideImg('qpc0',1)">&#8250;</button>
-                  <div class="proj-slide-lbl" id="qpc0-lbl">Test Overview</div>
-                </div>
-                <div class="proj-dots" id="qpc0-dots">
-                  <span class="pdot on"></span><span class="pdot"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 text-center">
-              <h4 class="display-6 anton-regular m-2">OrangeHRM Test Automation Framework</h4>
-              <p>Shows scale (200+ steps, 12+ modules), specific application (OrangeHRM), architecture (POM, BDD), and professional practices.
-              </p>
-              <div class="proj-tags mb-3">
-                <span class="proj-tag">Selenium</span>
-                <span class="proj-tag">Java</span>
-                <span class="proj-tag">TestNG</span>
-                <span class="proj-tag">Eclipse</span>
-                <span class="proj-tag">Cucumber</span>
-                <span class="proj-tag">Maven </span>
-              </div>
-              <a href="https://github.com/johnleiulit/orange-hrm-automation-selenium" target="_blank" class="btn btn-outline-dark">
-                <i class="fab fa-github fa-lg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- QA Project 1: Appium Mobile Automation -->
-        <div class="project-slide" id="qa-proj-1">
-          <div class="row gx-5 align-items-center">
-            <div class="col-lg-6">
-              <div class="proj-inner-carousel" id="qpc1">
-                <div class="proj-img-box">
-                  <img class="proj-img show" src="assets/images/projects/qa/appium/pic1.PNG" alt="">
-                  <img class="proj-img" src="assets/images/projects/qa/appium/pic2.PNG" alt="">
-                  <button class="proj-c-btn prev" onclick="slideImg('qpc1',-1)">&#8249;</button>
-                  <button class="proj-c-btn next" onclick="slideImg('qpc1',1)">&#8250;</button>
-                  <div class="proj-slide-lbl" id="qpc1-lbl">Mobile Test Cases</div>
-                </div>
-                <div class="proj-dots" id="qpc1-dots">
-                  <span class="pdot on"></span><span class="pdot"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 text-center">
-              <h4 class="display-6 anton-regular m-2">Appium Mobile Automation</h4>
-              <p>A mobile test automation project using Appium to automate Android application testing.
-                Covers UI interaction tests, navigation flows, and functional validations for mobile apps.
-              </p>
-              <div class="proj-tags mb-3">
-                <span class="proj-tag">Appium</span>
-                <span class="proj-tag">Java</span>
-                <span class="proj-tag">Android</span>
-                <span class="proj-tag">Eclipse</span>
-              </div>
-              <a href="https://github.com/johnlei-07" target="_blank" class="btn btn-outline-dark">
                 <i class="fab fa-github fa-lg"></i>
               </a>
             </div>
