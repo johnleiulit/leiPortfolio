@@ -3,6 +3,4 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initTypingAnimation();
     initThemeToggle();
-    initModal();
-    
 });
