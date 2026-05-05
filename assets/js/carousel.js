@@ -13,6 +13,7 @@ const imgLabels = {
   // QA Automation Extent Report screenshots
   qpc0: ['Test Overview','Passed Test Details'],
   qpc1: ['Extent Report Dashboard','Passed Test Details'],
+  qpc2: ['Test Overview','Passed Test Details'],
 };
 
 const imgIdx = {};
@@ -43,7 +44,7 @@ function changeProject(dir) {
   document.getElementById('nextProj').disabled = currentProj === totalProj - 1;
 } 
 let currentQA = 0;
-const totalQA = 2; 
+const totalQA = 3; 
 
 function changeQAProject(dir) {
   document.getElementById('qa-proj-' + currentQA).classList.remove('active');

@@ -362,7 +362,7 @@
         <!-- Project Navigation -->
         <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
           <button class="btn btn-dark btn-sm px-4" id="prevQA" onclick="changeQAProject(-1)" disabled>&#8592; Prev</button>
-          <span class="text-muted px-1" id="qaCounter">1 / 2</span>
+          <span class="text-muted px-1" id="qaCounter">1 / 3</span>
           <button class="btn btn-dark btn-sm px-4" id="nextQA" onclick="changeQAProject(1)">Next &#8594;</button>
         </div>
 
@@ -375,7 +375,8 @@
                   <video class="proj-img show" controls muted>
                     <source src="assets/images/projects/qa/orangehrm/orangeHRM.mp4" type="video/mp4">
                   </video>
-                    <img class="proj-img" src="assets/images/projects/qa/orangehrm/orangeHRM.png" alt="OrangeHRM Test Automation">                  <div class="proj-img-overlay">
+                    <img class="proj-img" src="assets/images/projects/qa/orangehrm/orangeHRM.png" alt="OrangeHRM Test Automation">                  
+                  <div class="proj-img-overlay">
                     <i class="fas fa-search-plus"></i>
                   </div>
                   <button class="proj-c-btn prev" onclick="event.stopPropagation(); slideImg('qpc0',-1)">&#8249;</button>
@@ -444,6 +445,51 @@
             </div>
           </div>
         </div>
+
+        <!-- QA Project 2: E-commer Autiomation -->
+        <div class="project-slide" id="qa-proj-2">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="proj-inner-carousel" id="qpc2">
+                <div class="proj-img-box" onclick="openProjModal(this)">
+                  <video class="proj-img show" controls muted>
+                    <source src="assets/images/projects/qa/e-commerce/e-commerce-selenium.mp4" type="video/mp4">
+                  </video>
+                  <img class="proj-img" src="assets/images/projects/qa/e-commerce/e-commerce.png" alt="Flipkart Test Automation">
+                  <div class="proj-img-overlay">
+                    <i class="fas fa-search-plus"></i>
+                  </div>
+                  <button class="proj-c-btn prev" onclick="event.stopPropagation(); slideImg('qpc2',-1)" aria-label="Previous">&#8249;</button>
+                  <button class="proj-c-btn next" onclick="event.stopPropagation(); slideImg('qpc2',1)" aria-label="Next">&#8250;</button>
+                  <div class="proj-slide-lbl">Test Overview</div>
+                </div>
+                <div class="proj-dots" id="qpc2-dots">
+                  <span class="pdot on"></span><span class="pdot"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center">
+              <h4 class="display-6 anton-regular m-2">Flipkart E-Commerce Test Automation</h4>
+              <p>
+                Comprehensive BDD test automation framework for Flipkart e-commerce platform 
+                built with Selenium WebDriver, Cucumber, Java, and TestNG. Features include Page Object Model architecture, data-driven testing with Excel integration, ExtentReports for detailed reporting, and automated screenshot capture. Implements 
+                6+ test scenarios covering search functionality, cart operations, and navigation workflows.
+              </p>
+              <div class="proj-tags mb-3">
+                <span class="proj-tag">Selenium </span>
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">TestNG</span>
+                <span class="proj-tag">Eclipse</span>
+                <span class="proj-tag">Cucumber </span>
+                <span class="proj-tag">Maven</span>
+              </div>
+              <a href="https://github.com/johnleiulit/e-commerce-automation-appium" target="_blank" class="btn btn-outline-dark" rel="noopener">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
     </section>
 
     <section id="projects" class="projects pb-5">
