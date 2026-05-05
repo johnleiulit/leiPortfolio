@@ -1,3 +1,4 @@
+/* Certifications Section */
 .certifications {
     background-color: var(--primary-bg);
     padding: 0;
@@ -83,7 +84,6 @@
     font-weight: 500;
 }
 
-
 .cert-badge {
     display: inline-block;
     background: rgba(34, 197, 94, 0.1);
@@ -94,7 +94,6 @@
     font-weight: 500;
     border: 1px solid rgba(34, 197, 94, 0.3);
 }
-
 
 .cert-badge.pending {
     background: rgba(251, 191, 36, 0.1);
@@ -114,24 +113,25 @@
     border-color: rgba(251, 191, 36, 0.3);
 }
 
+/* Certificate Modal */
 .cert-modal {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .cert-modal-content {
-    margin: auto;
     display: block;
+    margin: auto;
     max-width: 90%;
     max-height: 85vh;
     object-fit: contain;
@@ -150,20 +150,30 @@
 }
 
 .cert-modal-close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 40px;
-    color: #ffffff;
+    color: #ffffff !important;
+    background: transparent !important;
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
     z-index: 10000;
+    border: none;
+    line-height: 1;
+    padding: 0;
 }
 
 .cert-modal-close:hover,
 .cert-modal-close:focus {
-    color: #bbb;
+    color: #bbb !important;
+    background: transparent !important;
+}
+
+[data-theme="dark"] .cert-modal-close {
+    color: #ffffff !important;
+    background: transparent !important;
 }
 
 .cert-modal-caption {
@@ -179,28 +189,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .certifications-header {
-        padding: 40px 20px 30px;
-    }
-    
-    .certifications-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .cert-card {
-        padding: 20px;
-    }
-    
-    .cert-image {
-        height: 200px;
-    }
-    
-    .cert-title {
-        font-size: 1.1rem;
-    }
-    
     .cert-modal-content {
         max-width: 95%;
+        max-height: 80vh;
     }
     
     .cert-modal-close {
