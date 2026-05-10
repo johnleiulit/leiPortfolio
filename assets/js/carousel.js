@@ -1,5 +1,5 @@
 const imgLabels = {
-  pc0: ['Step 1: Select Product','Step 2: Select Size','Step 3: Select Sugar level','Step 4: Payment','Step 5: Receipt'],
+  pc0: [],
   pc1: ['Step 1: Select Product','Step 2: Select Model','Step 3: Enter Quantity','Step 4: Input X to check the cart','Step 5: The Cart','Step 6: Input V for the checkout','Step 7: Billing Station'],
   pc2: ['Salary Management System'],
   pc3: ['Log in Form','Registration Form','Database for Accounts','Simple CRUD','Database for Order Information'],
