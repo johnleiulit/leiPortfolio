@@ -61,8 +61,13 @@ const totalExp = 2;
 function goToExp(index) {
   index = Math.max(0, Math.min(index, totalExp - 1));
   currentExp = index;
-  const track = document.getElementById('expTrack');
-  if (track) track.style.transform = 'translateX(-' + (currentExp * 100) + '%)';
+  const track   = document.getElementById('expTrack');
+  const wrapper = document.getElementById('expSliderWrapper');
+  if (track && wrapper) {
+    // gap is 24px — must match the CSS gap on .exp-track
+    const gap = 24;
+    track.style.transform = 'translateX(-' + (currentExp * (wrapper.offsetWidth + gap)) + 'px)';
+  }
   document.querySelectorAll('.exp-dot').forEach(function(d, i) {
     d.classList.toggle('on', i === currentExp);
   });
@@ -86,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const threshold = 50;
 
   function getOffset() {
-    return currentExp * wrapper.offsetWidth;
+    const gap = 24;
+    return currentExp * (wrapper.offsetWidth + gap);
   }
 
   function onStart(x, y) {
