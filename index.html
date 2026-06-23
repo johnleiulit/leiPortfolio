@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Lei's Portfolios</title>
+    <title>John Lei's Portfolio</title>
     <!-- JS -->
     <script defer src="assets/js/navigation.js"></script>
     <script defer src="assets/js/animations.js"></script>
@@ -99,35 +99,74 @@
 
     <!-- WORK EXPERIENCE -->
     <section id="experience" class="experience">
-      <div class="container px-5">
-        <h2 class="text-center mb-5">Work Experience</h2>
-        
-        <!-- Experience Card -->
-        <div class="experience-card hidden-2">
-          <div class="d-flex justify-content-between align-items-start mb-3">
-            <h4 class="experience-title mb-0">Developer Intern</h4>
-            <span class="badge-internship">Internship</span>
-          </div>
-          
-          <p class="company-info mb-2">TaoCrowd, Inc - Pasig</p>
-          <p class="date-info mb-3">June 2025 - July 2025</p>
-          
-          <ul class="responsibilities-list">
-            <li>Performed front-end debugging and utilized Git/GitLab for version control and task tracking.</li>
-            <li>Collaborated with QA team to identify, track, and resolve defects, improving overall software quality.</li>
-            <li>Participated in twice-weekly Scrum meetings and used Jira to log, prioritize, and manage defects throughout the testing lifecycle.</li>
-          </ul>
-          
-          <div class="tech-tags-exp">
-            <span class="tech-tag-exp">Git</span>
-            <span class="tech-tag-exp">GitLab</span>
-            <span class="tech-tag-exp">Jira</span>
-            <span class="tech-tag-exp">Scrum</span>
-            <span class="tech-tag-exp">QA</span>
-            <span class="tech-tag-exp">Front-end</span>
-          </div>
-        
+      <div class="container px-2 px-sm-3 px-md-5">
+        <h2 class="text-center mb-4">Work Experience</h2>
+
+        <!-- Experience Slider Wrapper (swipe/drag to navigate) -->
+        <div class="exp-slider-wrapper" id="expSliderWrapper">
+          <div class="exp-track" id="expTrack">
+
+            <!-- Experience Slide 0: QA Analyst -->
+            <div class="experience-slide" id="exp-0">
+              <div class="experience-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4 class="experience-title mb-0">QA Analyst</h4>
+                  <span class="badge-internship">Freelance</span>
+                </div>
+                <p class="company-info mb-1">Golden Access Ventures</p>
+                <p class="date-info mb-1">June 2026 – Present</p>
+                <p class="date-info mb-3"><i class="fas fa-map-marker-alt me-1"></i>Remote</p>
+                <ul class="responsibilities-list">
+                  <li>Performed manual and functional testing on web applications, including responsive design testing across desktop, tablet, and mobile.</li>
+                  <li>Executed test cases and identified bugs, documenting issue summaries, reproduction steps, and actual vs. expected results in Trello.</li>
+                  <li>Captured screenshots and screen recordings of specific bugs to provide developers with clear visual evidence.</li>
+                  <li>Collaborated with QA team, developers, and project managers through daily stand-ups to track and resolve issues.</li>
+                </ul>
+                <div class="tech-tags-exp">
+                  <span class="tech-tag-exp">Manual Testing</span>
+                  <span class="tech-tag-exp">Functional Testing</span>
+                  <span class="tech-tag-exp">Bug Reporting</span>
+                  <span class="tech-tag-exp">Trello</span>
+                  <span class="tech-tag-exp">Responsive Testing</span>
+                  <span class="tech-tag-exp">Scrum</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Slide 1: Developer Intern -->
+            <div class="experience-slide" id="exp-1">
+              <div class="experience-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4 class="experience-title mb-0">Developer Intern</h4>
+                  <span class="badge-internship">Internship</span>
+                </div>
+                <p class="company-info mb-2">TaoCrowd, Inc - Pasig</p>
+                <p class="date-info mb-3">June 2025 - July 2025</p>
+                <ul class="responsibilities-list">
+                  <li>Performed front-end debugging and utilized Git/GitLab for version control and task tracking.</li>
+                  <li>Collaborated with QA team to identify, track, and resolve defects, improving overall software quality.</li>
+                  <li>Participated in twice-weekly Scrum meetings and used Jira to log, prioritize, and manage defects throughout the testing lifecycle.</li>
+                </ul>
+                <div class="tech-tags-exp">
+                  <span class="tech-tag-exp">Git</span>
+                  <span class="tech-tag-exp">GitLab</span>
+                  <span class="tech-tag-exp">Jira</span>
+                  <span class="tech-tag-exp">Scrum</span>
+                  <span class="tech-tag-exp">QA</span>
+                  <span class="tech-tag-exp">Front-end</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end exp-track -->
+        </div><!-- end exp-slider-wrapper -->
+
+        <!-- Dot Indicators -->
+        <div class="exp-dots mt-3" id="exp-dots">
+          <i class="exp-dot on"></i>
+          <i class="exp-dot"></i>
         </div>
+
       </div>
     </section>
 
