@@ -15,10 +15,14 @@
     color: #ffffff;
     padding: 35px;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .experience-card:hover {
@@ -29,13 +33,14 @@
 [data-theme="dark"] .experience-card {
     background: rgba(228, 230, 235, 0.15);
     color: #E4E6EB;
-  
 }
 
 .experience-title {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 600;
+    flex: 1;
+    min-width: 0;
 }
 
 .badge-internship {
@@ -46,6 +51,8 @@
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .company-info {
@@ -104,44 +111,143 @@
     background: rgba(255, 255, 255, 0.25);
 }
 
-.expand-btn {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: #ffffff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+/* ── Experience Slider ───────────────────────────── */
+.exp-slider-wrapper {
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.exp-slider-wrapper:active {
+    cursor: grabbing;
+}
+
+.exp-track {
     display: flex;
-    align-items: center;
+    width: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.experience-slide {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* ── Dots ──────────────────────────────────────────── */
+.exp-dots {
+    display: flex;
     justify-content: center;
+    gap: 8px;
+}
+
+.exp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(21, 51, 78, 0.25);
+    display: inline-block;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.expand-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+.exp-dot.on {
+    background: rgb(21, 51, 78);
+    transform: scale(1.2);
 }
 
-.expand-btn i {
-    font-size: 1rem;
+[data-theme="dark"] .exp-dot {
+    background: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Responsive */
+[data-theme="dark"] .exp-dot.on {
+    background: #ffffff !important;
+}
+
+/* ── Responsive ────────────────────────────────────── */
 @media (max-width: 768px) {
+    .experience {
+        padding: 40px 0;
+    }
+
     .experience-card {
-        padding: 25px;
+        padding: 18px 14px;
+        border-radius: 10px;
     }
-    
+
     .experience-title {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
-    
+
     .badge-internship {
+        font-size: 0.7rem;
+        padding: 3px 9px;
+    }
+
+    .company-info {
+        font-size: 0.88rem;
+    }
+
+    .date-info {
+        font-size: 0.8rem;
+    }
+
+    .responsibilities-list {
+        margin: 14px 0;
+    }
+
+    .responsibilities-list li {
+        font-size: 0.85rem;
+        padding-left: 18px;
+        margin-bottom: 9px;
+        line-height: 1.5;
+    }
+
+    .responsibilities-list li::before {
+        font-size: 1rem;
+    }
+
+    .tech-tags-exp {
+        gap: 6px;
+    }
+
+    .tech-tag-exp {
         font-size: 0.75rem;
-        padding: 4px 12px;
+        padding: 4px 9px;
+    }
+
+    .exp-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card {
+        padding: 14px 12px;
+    }
+
+    .experience-title {
+        font-size: 1rem;
+    }
+
+    .badge-internship {
+        font-size: 0.65rem;
+        padding: 3px 7px;
+    }
+
+    .responsibilities-list li {
+        font-size: 0.82rem;
+    }
+
+    .tech-tag-exp {
+        font-size: 0.72rem;
+        padding: 3px 7px;
     }
 }

@@ -54,3 +54,83 @@ function changeQAProject(dir) {
   document.getElementById('prevQA').disabled = currentQA === 0;
   document.getElementById('nextQA').disabled = currentQA === totalQA - 1;
 }
+
+let currentExp = 0;
+const totalExp = 2;
+
+function goToExp(index) {
+  index = Math.max(0, Math.min(index, totalExp - 1));
+  currentExp = index;
+  const track = document.getElementById('expTrack');
+  if (track) track.style.transform = 'translateX(-' + (currentExp * 100) + '%)';
+  document.querySelectorAll('.exp-dot').forEach(function(d, i) {
+    d.classList.toggle('on', i === currentExp);
+  });
+}
+
+function changeExperience(dir) {
+  goToExp(currentExp + dir);
+}
+
+// Touch & mouse drag swipe for experience slider
+document.addEventListener('DOMContentLoaded', function () {
+  const wrapper = document.getElementById('expSliderWrapper');
+  const track   = document.getElementById('expTrack');
+  if (!wrapper || !track) return;
+
+  let startX     = 0;
+  let startY     = 0;
+  let dragX      = 0;
+  let isDragging = false;
+  let isHoriz    = null; // determined after first meaningful move
+  const threshold = 50;
+
+  function getOffset() {
+    return currentExp * wrapper.offsetWidth;
+  }
+
+  function onStart(x, y) {
+    startX     = x;
+    startY     = y;
+    dragX      = x;
+    isDragging = true;
+    isHoriz    = null;
+    track.style.transition = 'none';
+  }
+
+  function onMove(x, y) {
+    if (!isDragging) return;
+    if (isHoriz === null) {
+      const dx = Math.abs(x - startX);
+      const dy = Math.abs(y - startY);
+      if (dx < 5 && dy < 5) return;
+      isHoriz = dx >= dy;
+    }
+    if (!isHoriz) return; // let browser scroll vertically
+    dragX = x;
+    track.style.transform = 'translateX(' + (-getOffset() + (dragX - startX)) + 'px)';
+  }
+
+  function onEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    if (isHoriz) {
+      const diff = startX - dragX;
+      goToExp(Math.abs(diff) >= threshold ? currentExp + (diff > 0 ? 1 : -1) : currentExp);
+    } else {
+      goToExp(currentExp);
+    }
+    isHoriz = null;
+  }
+
+  // Touch
+  wrapper.addEventListener('touchstart', function (e) { onStart(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+  wrapper.addEventListener('touchmove',  function (e) { onMove(e.touches[0].clientX,  e.touches[0].clientY); }, { passive: true });
+  wrapper.addEventListener('touchend',   function ()  { onEnd(); });
+
+  // Mouse
+  wrapper.addEventListener('mousedown',  function (e) { onStart(e.clientX, e.clientY); });
+  window.addEventListener('mousemove',   function (e) { onMove(e.clientX,  e.clientY); });
+  window.addEventListener('mouseup',     function ()  { onEnd(); });
+});
